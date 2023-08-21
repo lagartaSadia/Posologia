@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -78,10 +79,13 @@ fun PosologiaPreview() {
             modifier = Modifier
                 .fillMaxSize(1f)
         ) {
-            Column {
-                Greeting()
-                MedicalGridDisplay("D'Orto","22/08/2023 - Segunda-Feira")
-                MedicalGridDisplay("Alenia","22/08/2023 - Segunda-Feira")
+            LazyColumn  {
+                item {
+                    Greeting()
+                }
+                items(10) {
+                    MedicalGridDisplay("D'Orto","22/08/2023 - Segunda-Feira")
+                }
             }
         }
     }
