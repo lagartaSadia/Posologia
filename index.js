@@ -156,5 +156,3 @@ function removeMedicamento(id, telefone) {
   fs.writeFileSync("posologia.json", JSON.stringify(arr), "utf-8");
   return excluido;
 }
-
-/* Falta arrumar a função de remover medicamento, não esta removendo */
